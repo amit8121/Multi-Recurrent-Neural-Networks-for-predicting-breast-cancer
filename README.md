@@ -18,7 +18,7 @@ Hyper Parameters: There are many hyper parameters to be tuned in a neural networ
 
 3)Normalization:Implemented a standard StandardScalar normalization.
 
-4)Regularization:I've started from a high drop out rate of 0.5 (probability of dropping a neuron while training) it turned out that the model was underfitting the data. A drop out probability of 0.20 worked best for this model.
+4)Regularization:I've started from a high drop out rate of 0.5 (probability of dropping a neuron while training) it turned out that the model was underfitting the data. A drop out probability of 0.12 worked best for this model.
 
 5)Optimization: I've tried a variety of optimization techniques ranging from the standard GradientDescentOptimizer to Momentum, NesterovGradientDescent and Adam. The AdamOptimizer with a learning rate of 0.001 worked the best of all.
 
