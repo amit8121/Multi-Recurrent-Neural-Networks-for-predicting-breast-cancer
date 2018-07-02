@@ -3,7 +3,7 @@ The Multi_RNN.py contains a class that classifies on Breast Cancer dataset using
 
 Dataset here: https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.data.
 
-The goal was to predict the 'severity' of the cancer by feeding to a Recurrent Neural Network (ex: RI index, Na index, Mg index etc) variables. I've decided not to perform Exploratory Data Analysis because, the main priority was to build a decent Recurrent Neural Network Classifier to predict the severity of the cancer.
+The goal was to predict the 'severity' of the cancer by feeding to a Recurrent Neural Network 30 important characteristics(ex: radius_mean, texture_mean, perimeter_mean) variables. I've decided not to perform Exploratory Data Analysis because, the main priority was to build a decent Recurrent Neural Network Classifier to predict the severity of the cancer.
 
 For better readability of the code I've used the name_scope convention (one of tensor flow's function) to differentiate levels of neural network and visualize each stage on the tensorboard later. 
 
