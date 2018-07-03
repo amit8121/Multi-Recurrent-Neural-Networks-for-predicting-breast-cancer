@@ -8,7 +8,8 @@ The goal was to predict the 'severity' of the cancer by feeding to a Recurrent N
 For better readability of the code I've used the name_scope convention (one of tensor flow's function) to differentiate levels of neural network and visualize each stage on the tensorboard later. 
 
  
- Multiple cells(3) of  Recurrent Neural Networks with 100 neurons each were used for prediction.
+ Multiple cells(3) of  Recurrent Neural Networks with 100 neurons each were used for prediction. A "Dynamic_RNN" function of the tensorflow API was used to unroll multiple recurrent neural network cells through time.
+ 
  
 Hyper Parameters: There are many hyper parameters to be tuned in a neural network. I've tried my best to experiment with as many hyper parameters as I could and choosen the ones which are better suited for this data set:
 
@@ -18,7 +19,7 @@ Hyper Parameters: There are many hyper parameters to be tuned in a neural networ
 
 3)Normalization:Implemented a standard StandardScalar normalization.
 
-4)Regularization:I've started from a high drop out rate of 0.5 (probability of dropping a neuron while training) it turned out that the model was underfitting the data. A drop out probability of 0.12 worked best for this model.
+4)Regularization:I've used "DROPOUT" as the regularization parameter. I've tested on both cell wise (dropping each recurrent neural network layer randomly) by using "DROPOUT WRAPPER" of tensor flow and neuron wise dropout(dropping neurons in individual cells). The neuron level dropout strategy was performing far better than cell wise dropout strategy.I've started from a high drop out rate of 0.5 (probability of dropping a neuron while training) it turned out that the model was underfitting the data. A drop out probability of 0.12 worked best for this model.
 
 5)Optimization: I've tried a variety of optimization techniques ranging from the standard GradientDescentOptimizer to Momentum, NesterovGradientDescent and Adam. The AdamOptimizer with a learning rate of 0.001 worked the best of all.
 
